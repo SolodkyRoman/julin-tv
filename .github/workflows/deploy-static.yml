@@ -3,7 +3,7 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main    # або твоя гілка
 
 jobs:
   build-and-deploy:
@@ -16,19 +16,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: 'pnpm'
+          node-version: 18
 
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
 
       - name: Build and Export
         run: |
-          pnpm run build
+          yarn build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: out
+          publish_dir: out  
