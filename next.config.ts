@@ -1,9 +1,10 @@
 import type { NextConfig } from 'next';
+import { PHASE_PRODUCTION_BUILD } from 'next/constants';
 
-const nextConfig: NextConfig = {
+const nextConfig = (phase: string): NextConfig => ({
   /* config options here */
   output: 'export',
-  basePath: '/julin-tv',
-};
+  basePath: phase === PHASE_PRODUCTION_BUILD ? '/julin-tv' : undefined,
+});
 
 export default nextConfig;
