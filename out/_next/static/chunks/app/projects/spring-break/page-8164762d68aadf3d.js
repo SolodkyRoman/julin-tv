@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[861],{2371:(e,r,s)=>{"use strict";s.r(r),s.d(r,{default:()=>i});var a=s(5155);let i=()=>(0,a.jsx)("div",{children:"Spring Break Project"})},8614:(e,r,s)=>{Promise.resolve().then(s.bind(s,2371))}},e=>{var r=r=>e(e.s=r);e.O(0,[441,684,358],()=>r(8614)),_N_E=e.O()}]);

@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[443],{4310:(e,r,s)=>{Promise.resolve().then(s.bind(s,7521))},7521:(e,r,s)=>{"use strict";s.r(r),s.d(r,{default:()=>d});var l=s(5155);let d=()=>(0,l.jsx)("div",{children:"Proper Wild Project"})}},e=>{var r=r=>e(e.s=r);e.O(0,[441,684,358],()=>r(4310)),_N_E=e.O()}]);

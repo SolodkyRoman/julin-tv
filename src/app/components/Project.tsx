@@ -18,7 +18,7 @@ const Project = ({ title, description, id, labels }: ProjectPresentation) => {
       <div className='flex-1 px-8 '>
         <Link href={`/projects/${id}`}>
           <img
-            src={`/images/projects/${id}/thumbnail.png`}
+            src={`images/projects/${id}/thumbnail.png`}
             alt='Project Placeholder'
             className='w-full h-auto'
           />
@@ -27,8 +27,8 @@ const Project = ({ title, description, id, labels }: ProjectPresentation) => {
       <div className='flex-1 px-8'>
         <h2 className='text-[32px]'>{title}</h2>
         <div className='flex mt-5'>
-          {labels.map(({ text, color }) => (
-            <div className={`px-8 py-2 mr-3 font-medium ${color}`} key={text}>
+          {labels.map(({ text, color }, index) => (
+            <div className={`px-8 py-2 mr-3 font-medium ${color}`} key={index}>
               {text}
             </div>
           ))}
