@@ -8,7 +8,7 @@ import Slider from './Slider';
 
 const Page = () => {
   return (
-    <ImagePathProvider path='/images/projects/proper-wild'>
+    <ImagePathProvider path='images/projects/proper-wild'>
       <ProjectInfo
         title='Proper Wild'
         description='As the Senior Brand Designer at Proper Wild, I lead all design efforts, overseeing creative execution across both digital and print channels. My work includes digital ads, motion graphics, photo retouching, Amazon assets, email campaigns, and POS materials. I ensure consistent brand alignment across emails, social media, and printed collateral.'
