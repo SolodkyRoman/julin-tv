@@ -1,13 +1,8 @@
-import React from 'react';
-import Header from '@/components/Header';
+import React, { ReactNode } from 'react';
+import PageLayout from '@/components/PageLayout';
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <Header />
-      {children}
-    </>
-  );
+const Layout = ({ children }: { children: ReactNode }) => {
+  return <PageLayout>{children}</PageLayout>;
 };
 
 export default Layout;

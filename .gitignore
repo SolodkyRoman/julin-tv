@@ -10,6 +10,9 @@
 !.yarn/releases
 !.yarn/versions
 
+formatter/node_modules
+formatter/pnpm-lock.yaml
+
 # testing
 /coverage
 
