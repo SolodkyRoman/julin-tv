@@ -1,3 +1,5 @@
+'use client';
+
 type ProjectInfoProps = {
   title: string;
   description: string;
