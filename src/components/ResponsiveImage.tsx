@@ -31,13 +31,13 @@ const ResponsiveImage = ({
   const srcSet = FULL_SCREEN_WIDTHS.map(fw => {
     const w = getImageWidth(fw, rowCount);
 
-    return `/${imagePath}/${imageName}-${w}.${format} ${w}w`;
+    return `${imagePath}/${imageName}-${w}.${format} ${w}w`;
   }).join(', ');
 
   return (
     <div className={className}>
       <img
-        src={`/${imagePath}/${imageName}-${srcW}.${format}`}
+        src={`${imagePath}/${imageName}-${srcW}.${format}`}
         srcSet={srcSet}
         alt={alt}
         className={`object-cover h-full animate-visible`}
