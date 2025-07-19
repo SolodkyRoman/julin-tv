@@ -24,7 +24,7 @@ body {
 .animate-visible {
     backdrop-filter: blur(10px);
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(60px);
     transition: all 0.8s ease-out;
 }
 
