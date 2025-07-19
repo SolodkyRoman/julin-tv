@@ -32,7 +32,7 @@ const useAnimateVisible = () => {
   }, []);
 };
 
-const PageLayout = ({ children }: { children: ReactNode }) => {
+const CommonLayout = ({ children }: { children: ReactNode }) => {
   useAnimateVisible();
 
   return (
@@ -43,4 +43,4 @@ const PageLayout = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default PageLayout;
+export default CommonLayout;

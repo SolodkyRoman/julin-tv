@@ -12,7 +12,12 @@ export type ProjectPresentation = {
   title: string;
 };
 
-const Project = ({ title, description, id, labels }: ProjectPresentation) => {
+const MainPageProject = ({
+  title,
+  description,
+  id,
+  labels,
+}: ProjectPresentation) => {
   return (
     <div className='flex py-8 border-b-1 last:border-b-0'>
       <div className='flex-1 px-8 '>
@@ -39,4 +44,4 @@ const Project = ({ title, description, id, labels }: ProjectPresentation) => {
   );
 };
 
-export default Project;
+export default MainPageProject;

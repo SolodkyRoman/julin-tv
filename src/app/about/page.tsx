@@ -1,7 +1,7 @@
 'use client';
 
-import PageLayout from '@/components/PageLayout';
+import CommonLayout from '@/components/CommonLayout';
 
-const AboutPage = () => <PageLayout>About Page</PageLayout>;
+const AboutPage = () => <CommonLayout>About Page</CommonLayout>;
 
 export default AboutPage;

@@ -13,6 +13,9 @@ type ImageProps = {
 
 const FULL_SCREEN_WIDTHS = [3840, 2560, 1920, 1280, 720];
 
+const getImageWidth = (fullScreenW: number, count: number) =>
+  Math.ceil(fullScreenW / count / 10) * 10;
+
 const ResponsiveImage = ({
   alt,
   className,
@@ -23,18 +26,18 @@ const ResponsiveImage = ({
 }: ImageProps) => {
   const contextPath = useImagePath();
   const imagePath = path ?? contextPath;
+  const srcW = getImageWidth(FULL_SCREEN_WIDTHS[0], rowCount);
 
-  const srcSet = FULL_SCREEN_WIDTHS.map(w => {
-    const divided = w / rowCount;
-    const roundedToTen = Math.ceil(divided / 10) * 10;
+  const srcSet = FULL_SCREEN_WIDTHS.map(fw => {
+    const w = getImageWidth(fw, rowCount);
 
-    return `${imagePath}/${imageName}-${roundedToTen}.${format} ${roundedToTen}w`;
+    return `/${imagePath}/${imageName}-${w}.${format} ${w}w`;
   }).join(', ');
 
   return (
     <div className={className}>
       <img
-        src={`${imagePath}/${imageName}-${FULL_SCREEN_WIDTHS[0] / rowCount}.${format}`}
+        src={`/${imagePath}/${imageName}-${srcW}.${format}`}
         srcSet={srcSet}
         alt={alt}
         className={`object-cover h-full animate-visible`}

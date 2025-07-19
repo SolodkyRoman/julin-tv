@@ -1,7 +1,9 @@
 'use client';
 
-import PageLayout from '@/components/PageLayout';
-import Project, { ProjectPresentation } from './components/Project';
+import CommonLayout from '@/components/CommonLayout';
+import MainPageProject, {
+  ProjectPresentation,
+} from './components/MainPageProject';
 
 const PROJECTS: ProjectPresentation[] = [
   {
@@ -48,11 +50,11 @@ const PROJECTS: ProjectPresentation[] = [
 
 const Home = () => {
   return (
-    <PageLayout>
+    <CommonLayout>
       {PROJECTS.map((project, index) => (
-        <Project key={index} {...project} />
+        <MainPageProject key={index} {...project} />
       ))}
-    </PageLayout>
+    </CommonLayout>
   );
 };
 

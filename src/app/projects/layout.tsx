@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
-import PageLayout from '@/components/PageLayout';
+import CommonLayout from '@/components/CommonLayout';
 
 const Layout = ({ children }: { children: ReactNode }) => {
-  return <PageLayout>{children}</PageLayout>;
+  return <CommonLayout>{children}</CommonLayout>;
 };
 
 export default Layout;
