@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable */
 
 const fs = require('fs');
 const path = require('path');
@@ -9,6 +10,7 @@ const { program } = require('commander');
 const SUPPORTED_EXT = ['.jpg', '.jpeg', '.png', '.tiff', '.webp', '.avif'];
 
 // CLI definition
+// node format.js --output projects/proper-wild --rowCount 2 --formats png  --input projects/proper-wild-raw/PW21_final.png
 program
   .requiredOption('-i, --input <path>', 'input file or directory')
   .requiredOption('-o, --output <dir>', 'output directory for formatted images')

@@ -120,7 +120,7 @@ const Page = () => {
 
       <div className='flex mx-3 my-3 gap-3 flex-col'>
         <div className='w-full'>
-          <video autoPlay muted loop playsInline>
+          <video autoPlay muted loop playsInline className='animate-visible'>
             <source
               src={`${BASE_PATH}/images/projects/proper-wild/PW15_1920x1080.mp4`}
               type='video/mp4'
@@ -141,7 +141,7 @@ const Page = () => {
 
         <div className='flex mx-3 my-3 gap-3'>
           <div>
-            <video autoPlay muted loop playsInline>
+            <video autoPlay muted loop playsInline className='animate-visible'>
               <source
                 src={`${BASE_PATH}/images/projects/proper-wild/PW17_479x852.mp4`}
                 type='video/mp4'
@@ -149,7 +149,7 @@ const Page = () => {
             </video>
           </div>
           <div>
-            <video autoPlay muted loop playsInline>
+            <video autoPlay muted loop playsInline className='animate-visible'>
               <source
                 src={`${BASE_PATH}/images/projects/proper-wild/PW18_479x852.mp4`}
                 type='video/mp4'
@@ -157,7 +157,7 @@ const Page = () => {
             </video>
           </div>
           <div>
-            <video autoPlay muted loop playsInline>
+            <video autoPlay muted loop playsInline className='animate-visible'>
               <source
                 src={`${BASE_PATH}/images/projects/proper-wild/PW19_479x852.mp4`}
                 type='video/mp4'
@@ -165,7 +165,7 @@ const Page = () => {
             </video>
           </div>
           <div>
-            <video autoPlay muted loop playsInline>
+            <video autoPlay muted loop playsInline className='animate-visible'>
               <source
                 src={`${BASE_PATH}/images/projects/proper-wild/PW20_479x852.mp4`}
                 type='video/mp4'

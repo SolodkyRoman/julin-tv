@@ -21,6 +21,7 @@ formatter/pnpm-lock.yaml
 
 # production
 /out
+/public/images/projects/sb-raw
 
 # misc
 .DS_Store
