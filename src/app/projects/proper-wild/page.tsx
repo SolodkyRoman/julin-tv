@@ -5,6 +5,7 @@ import SectionDivider from '@/components/SectionDivider';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import Slider from './Slider';
+import HorizontalProgressiveScroll from '@/components/HorizontalProgressiveScroll';
 
 const Page = () => {
   return (
@@ -101,6 +102,90 @@ const Page = () => {
         />
 
         <Slider />
+      </div>
+
+      <div className='mx-3 my-3'>
+        <HorizontalProgressiveScroll>
+          <ResponsiveImage imageName='PW13' format='png' alt='prope' />
+        </HorizontalProgressiveScroll>
+      </div>
+
+      <div className='mx-3 my-3'>
+        <ResponsiveImage imageName='PW14' format='png' alt='prope' />
+      </div>
+
+      <SectionDivider label='Video Editing' />
+
+      <div className='flex mx-3 my-3 gap-3 flex-col'>
+        <div className='w-full'>
+          <video autoPlay muted loop playsInline>
+            <source
+              src='/images/projects/proper-wild/PW15_1920x1080.mp4'
+              type='video/mp4'
+              media='(min-width: 1200px)'
+            />
+            <source
+              src='/images/projects/proper-wild/PW15_1280x720.mp4'
+              type='video/mp4'
+              media='(min-width: 768px)'
+            />
+            <source
+              src='/images/projects/proper-wild/PW15_853x480.mp4'
+              type='video/mp4'
+              media='(min-width: 480px)'
+            />
+          </video>
+        </div>
+
+        <div className='flex mx-3 my-3 gap-3'>
+          <div>
+            <video autoPlay muted loop playsInline>
+              <source
+                src='/images/projects/proper-wild/PW17_479x852.mp4'
+                type='video/mp4'
+              />
+            </video>
+          </div>
+          <div>
+            <video autoPlay muted loop playsInline>
+              <source
+                src='/images/projects/proper-wild/PW18_479x852.mp4'
+                type='video/mp4'
+              />
+            </video>
+          </div>
+          <div>
+            <video autoPlay muted loop playsInline>
+              <source
+                src='/images/projects/proper-wild/PW19_479x852.mp4'
+                type='video/mp4'
+              />
+            </video>
+          </div>
+          <div>
+            <video autoPlay muted loop playsInline>
+              <source
+                src='/images/projects/proper-wild/PW20_479x852.mp4'
+                type='video/mp4'
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div className='flex mx-3 mt-6 mb-3 gap-3'>
+        <ResponsiveImage
+          rowCount={2}
+          imageName='PW21_final'
+          format='png'
+          alt='prope'
+        />
+        <ResponsiveImage
+          rowCount={2}
+          imageName='PW22'
+          format='png'
+          alt='prope'
+        />
       </div>
     </ImagePathProvider>
   );

@@ -36,12 +36,12 @@ const ResponsiveImage = ({
   }).join(', ');
 
   return (
-    <div className={className}>
+    <div className={className ?? ''}>
       <img
         src={`${BASE_PATH}/${imagePath}/${imageName}-${srcW}.${format}`}
         srcSet={srcSet}
         alt={alt}
-        className={`object-cover h-full animate-visible`}
+        className={`object-cover w-full h-full animate-visible`}
       />
     </div>
   );

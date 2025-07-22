@@ -20,7 +20,7 @@ formatter/pnpm-lock.yaml
 /.next/
 
 # production
-/build
+/out
 
 # misc
 .DS_Store
