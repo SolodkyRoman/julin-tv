@@ -51,7 +51,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3'>
+      <div className='flex gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='PW6'
           format='png'
@@ -175,7 +175,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className='flex mx-3 mt-6 mb-3 gap-3'>
+      <div className='flex mx-3 mt-20 mb-3 gap-3'>
         <ResponsiveImage
           rowCount={2}
           imageName='PW21_final'

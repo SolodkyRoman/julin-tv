@@ -2,6 +2,7 @@
 
 import React, { ReactNode, useEffect } from 'react';
 import Header from './Header';
+import Footer from '@/components/Footer';
 
 const makeScolledElementsVisible = () => {
   const animatedElements = document.querySelectorAll('.animate-visible');
@@ -66,6 +67,7 @@ const CommonLayout = ({ children }: { children: ReactNode }) => {
     <div>
       <Header />
       {children}
+      <Footer />
     </div>
   );
 };

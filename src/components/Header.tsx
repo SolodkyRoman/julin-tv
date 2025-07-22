@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const pathname = usePathname();
-  console.log(pathname);
 
   const navItems = [
     { name: 'WORK', link: '/', color: 'bg-electric-lime' },
