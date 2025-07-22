@@ -7,6 +7,8 @@ import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import Slider from './Slider';
 import HorizontalProgressiveScroll from '@/components/HorizontalProgressiveScroll';
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 const Page = () => {
   return (
     <ImagePathProvider path='images/projects/proper-wild'>
@@ -120,17 +122,17 @@ const Page = () => {
         <div className='w-full'>
           <video autoPlay muted loop playsInline>
             <source
-              src='/images/projects/proper-wild/PW15_1920x1080.mp4'
+              src={`${BASE_PATH}/images/projects/proper-wild/PW15_1920x1080.mp4`}
               type='video/mp4'
               media='(min-width: 1200px)'
             />
             <source
-              src='/images/projects/proper-wild/PW15_1280x720.mp4'
+              src={`${BASE_PATH}/images/projects/proper-wild/PW15_1280x720.mp4`}
               type='video/mp4'
               media='(min-width: 768px)'
             />
             <source
-              src='/images/projects/proper-wild/PW15_853x480.mp4'
+              src={`${BASE_PATH}/images/projects/proper-wild/PW15_853x480.mp4`}
               type='video/mp4'
               media='(min-width: 480px)'
             />
@@ -141,7 +143,7 @@ const Page = () => {
           <div>
             <video autoPlay muted loop playsInline>
               <source
-                src='/images/projects/proper-wild/PW17_479x852.mp4'
+                src={`${BASE_PATH}/images/projects/proper-wild/PW17_479x852.mp4`}
                 type='video/mp4'
               />
             </video>
@@ -149,7 +151,7 @@ const Page = () => {
           <div>
             <video autoPlay muted loop playsInline>
               <source
-                src='/images/projects/proper-wild/PW18_479x852.mp4'
+                src={`${BASE_PATH}/images/projects/proper-wild/PW18_479x852.mp4`}
                 type='video/mp4'
               />
             </video>
@@ -157,7 +159,7 @@ const Page = () => {
           <div>
             <video autoPlay muted loop playsInline>
               <source
-                src='/images/projects/proper-wild/PW19_479x852.mp4'
+                src={`${BASE_PATH}/images/projects/proper-wild/PW19_479x852.mp4`}
                 type='video/mp4'
               />
             </video>
@@ -165,7 +167,7 @@ const Page = () => {
           <div>
             <video autoPlay muted loop playsInline>
               <source
-                src='/images/projects/proper-wild/PW20_479x852.mp4'
+                src={`${BASE_PATH}/images/projects/proper-wild/PW20_479x852.mp4`}
                 type='video/mp4'
               />
             </video>
