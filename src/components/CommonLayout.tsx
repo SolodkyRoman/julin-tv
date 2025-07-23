@@ -8,10 +8,9 @@ const makeScolledElementsVisible = () => {
   const animatedElements = document.querySelectorAll('.animate-visible');
   animatedElements.forEach(el => {
     const rect = el.getBoundingClientRect();
-    const isAboveViewport = rect.bottom < 0;
+    const isAboveViewport = rect.bottom > 0 || window.scrollY >= rect.top;
 
     if (isAboveViewport) {
-      console.log(el);
       el.classList.add('visible');
     }
   });
