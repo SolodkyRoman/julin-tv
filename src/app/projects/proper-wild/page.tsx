@@ -4,10 +4,11 @@ import ProjectInfo from '@/app/projects/ProjectInfo';
 import SectionDivider from '@/components/SectionDivider';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
-import Slider from './Slider';
+import Slider from '@/components/Slider';
 import HorizontalProgressiveScroll from '@/components/HorizontalProgressiveScroll';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const SLIDER_IMAGES = ['PW12_a', 'PW12_b', 'PW12_c', 'PW12_d', 'PW12_e'];
 
 const Page = () => {
   return (
@@ -94,7 +95,7 @@ const Page = () => {
 
       <SectionDivider label='Amazon Assets' />
 
-      <div className='flex gap-3 mx-3 items-stretch'>
+      <div className='grid grid-cols-2 gap-3 mx-3'>
         <ResponsiveImage
           imageName='PW11'
           format='png'
@@ -103,7 +104,7 @@ const Page = () => {
           className='flex-1/2'
         />
 
-        <Slider />
+        <Slider imgNames={SLIDER_IMAGES} rowCount={2} />
       </div>
 
       <div className='mx-3 my-3'>

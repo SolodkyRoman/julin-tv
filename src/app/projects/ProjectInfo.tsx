@@ -1,8 +1,10 @@
 'use client';
 
+import { ReactNode } from 'react';
+
 type ProjectInfoProps = {
   title: string;
-  description: string;
+  description: string | ReactNode;
 };
 
 const ProjectInfo = ({ title, description }: ProjectInfoProps) => {
@@ -12,7 +14,7 @@ const ProjectInfo = ({ title, description }: ProjectInfoProps) => {
         <h1 className='font-medium text-[32px]'>{title}</h1>
       </div>
       <div className='flex-1'>
-        <p>{description}</p>
+        {typeof description === 'string' ? <p>{description}</p> : description}
       </div>
     </div>
   );
