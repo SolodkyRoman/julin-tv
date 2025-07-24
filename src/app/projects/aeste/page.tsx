@@ -15,7 +15,13 @@ const Page = () => {
       />
 
       <div className='grid grid-cols-2 gap-3 mx-3'>
-        <video autoPlay muted loop playsInline className='animate-visible'>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className='animate-visible w-full'
+        >
           <source
             src={`${BASE_PATH}/images/projects/ae/ae1.mp4`}
             type='video/mp4'
