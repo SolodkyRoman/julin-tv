@@ -1,9 +1,8 @@
 'use client';
 
 import CommonLayout from '@/components/CommonLayout';
-import MainPageProject, {
-  ProjectPresentation,
-} from './components/MainPageProject';
+import { ProjectPresentation } from './components/MainPageProject';
+import CirclingCarousel from '@/app/components/CirclingCarousel';
 
 const PROJECTS: ProjectPresentation[] = [
   {
@@ -51,9 +50,11 @@ const PROJECTS: ProjectPresentation[] = [
 const Home = () => {
   return (
     <CommonLayout>
-      {PROJECTS.map((project, index) => (
-        <MainPageProject key={index} {...project} />
-      ))}
+      <CirclingCarousel />
+
+      {/*{PROJECTS.map((project, index) => (*/}
+      {/*  <MainPageProject key={index} {...project} />*/}
+      {/*))}*/}
     </CommonLayout>
   );
 };
