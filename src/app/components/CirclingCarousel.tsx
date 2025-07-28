@@ -227,7 +227,7 @@ const EllipticalAnimation = () => {
                   className='animate-visible'
                 >
                   <source
-                    src={`${BASE_PATH}images/carousel/${item}`}
+                    src={`${BASE_PATH}/images/carousel/${item}`}
                     type='video/mp4'
                   />
                 </video>
