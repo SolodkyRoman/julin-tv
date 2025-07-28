@@ -3,7 +3,7 @@
 import CommonLayout from '@/components/CommonLayout';
 import { ProjectPresentation } from './components/MainPageProject';
 import CirclingCarousel from '@/app/components/CirclingCarousel';
-import React, { useState } from 'react';
+import React from 'react';
 
 const PROJECTS: ProjectPresentation[] = [
   {
@@ -49,11 +49,10 @@ const PROJECTS: ProjectPresentation[] = [
 ];
 
 const Home = () => {
-  const [contentHeight, setContentHeight] = useState(1000);
   console.log(PROJECTS);
   return (
-    <CommonLayout contentHeight={contentHeight}>
-      <CirclingCarousel onHeightChange={setContentHeight} />
+    <CommonLayout>
+      <CirclingCarousel />
       {/*{PROJECTS.map((project, index) => (*/}
       {/*  <MainPageProject key={index} {...project} />*/}
       {/*))}*/}

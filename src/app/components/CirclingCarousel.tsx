@@ -96,28 +96,21 @@ const createEllipticalKeyframes = (
   return { x: xKeyframes, y: yKeyframes };
 };
 
-const CirclingCarousel = ({
-  onHeightChange,
-}: {
-  onHeightChange: (h: number) => void;
-}) => {
+const CirclingCarousel = () => {
   const [screenSize, setScreenSize] = useState<ScreenSize>('lg');
 
   useLayoutEffect(() => {
     const updateScreenSize = () => {
       const width = window.innerWidth;
-      let size: ScreenSize = 'lg';
       if (width < 1024) {
-        size = 'sm';
+        setScreenSize('sm');
       } else if (width < 1200) {
-        size = 'md';
+        setScreenSize('md');
       } else if (width < 1500) {
-        size = 'lg';
+        setScreenSize('lg');
       } else {
-        size = 'xlg';
+        setScreenSize('xlg');
       }
-      setScreenSize(size);
-      onHeightChange(containerHeight[size]);
     };
 
     updateScreenSize();
@@ -127,7 +120,7 @@ const CirclingCarousel = ({
     return () => {
       window.removeEventListener('resize', updateScreenSize);
     };
-  }, [onHeightChange]);
+  }, []);
 
   const radiusX = rx[screenSize];
   const radiusY = ry[screenSize];

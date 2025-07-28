@@ -1,6 +1,13 @@
+export const FOOTER_HEIGHT = 80;
+
 const Footer = () => {
   return (
-    <div className='h-20 mx-3 flex justify-between items-center font-bold text-[#DBDBDB]'>
+    <div
+      className='mx-3 flex justify-between items-center font-bold text-[#DBDBDB]'
+      style={{
+        height: FOOTER_HEIGHT,
+      }}
+    >
       <span>2025 yuliya.tv</span>
       <ul className='flex gap-8'>
         <li>

@@ -2,7 +2,7 @@
 
 import React, { ReactNode, useEffect } from 'react';
 import Header, { HEADER_HEIGHT } from './Header';
-import Footer from '@/components/Footer';
+import Footer, { FOOTER_HEIGHT } from '@/components/Footer';
 
 const makeScolledElementsVisible = () => {
   const animatedElements = document.querySelectorAll('.animate-visible');
@@ -61,7 +61,6 @@ const useAnimateVisible = () => {
 
 const CommonLayout = ({
   children,
-  contentHeight = 0,
 }: {
   children: ReactNode;
   contentHeight?: number;
@@ -74,8 +73,7 @@ const CommonLayout = ({
       <div
         className={`antialiased`}
         style={{
-          // TODO: fix
-          minHeight: `calc(100vh - ${HEADER_HEIGHT}px - ${contentHeight}px)`,
+          minHeight: `calc(100vh - ${HEADER_HEIGHT}px - ${FOOTER_HEIGHT}px)`,
         }}
       >
         {children}
