@@ -3,43 +3,51 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+export const HEADER_HEIGHT = 86;
+
 const Header = () => {
   const pathname = usePathname();
 
   const navItems = [
-    { name: 'WORK', link: '/', color: 'bg-electric-lime' },
+    { name: 'WORK', link: '/projects', color: 'bg-electric-lime' },
     { name: 'INFO', link: '/info', color: 'bg-hot-pink' },
     { name: 'PLAYGROUND', link: '/playground', color: 'bg-lime-green' },
   ];
 
   return (
-    <header className='w-full bg-white border-b border-foreground px-8 py-9'>
-      <div className='flex justify-between items-start'>
-        <Link className='flex flex-col' href='/'>
-          <h1 className='text-[32px] font-medium'>Yuliya Tverdokhlib</h1>
-          <h2 className='text-[32px] font-medium'>
-            Brand Design & Art Direction
-          </h2>
+    <header
+      className={`w-full border-b border-foreground px-3 py-4 h-[${HEADER_HEIGHT}px]`}
+    >
+      <div className='flex justify-between items-center'>
+        <Link
+          className='flex flex-col text-[24px]'
+          style={{ lineHeight: 1.1 }}
+          href='/'
+        >
+          <span>Yuliya Tverdokhlib</span>
+          <span>Brand Design & Art Direction</span>
         </Link>
 
-        <nav className='flex items-center space-x-1'>
+        <nav className='flex items-center gap-3'>
           {navItems.map(item => (
             <Link
               href={item.link}
               key={item.name}
-              className={`
-                  flex items-center space-x-[6px] px-4 py-2 text-[26px] font-medium 
-                  ${
-                    pathname === item.link
-                      ? 'border-b-foreground border-b-1'
-                      : 'text-gray-900 hover:bg-gray-50'
-                  }
-                `}
+              className='flex items-center space-x-[6px] px-1 py-1 text-[20px]'
             >
               <span
-                className={`w-[32px] h-[32px] rounded-full ${item.color} `}
+                className={`w-[20px] h-[20px] rounded-full ${item.color}`}
               />
-              <span>{item.name}</span>
+              <span
+                className={
+                  pathname === item.link
+                    ? 'underline underline-offset-[6px]'
+                    : ''
+                }
+                style={{ textDecorationThickness: 1 }}
+              >
+                {item.name}
+              </span>
             </Link>
           ))}
         </nav>

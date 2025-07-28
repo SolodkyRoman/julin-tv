@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -96,21 +96,28 @@ const createEllipticalKeyframes = (
   return { x: xKeyframes, y: yKeyframes };
 };
 
-const EllipticalAnimation = () => {
+const CirclingCarousel = ({
+  onHeightChange,
+}: {
+  onHeightChange: (h: number) => void;
+}) => {
   const [screenSize, setScreenSize] = useState<ScreenSize>('lg');
 
   useLayoutEffect(() => {
     const updateScreenSize = () => {
       const width = window.innerWidth;
+      let size: ScreenSize = 'lg';
       if (width < 1024) {
-        setScreenSize('sm');
+        size = 'sm';
       } else if (width < 1200) {
-        setScreenSize('md');
+        size = 'md';
       } else if (width < 1500) {
-        setScreenSize('lg');
+        size = 'lg';
       } else {
-        setScreenSize('xlg');
+        size = 'xlg';
       }
+      setScreenSize(size);
+      onHeightChange(containerHeight[size]);
     };
 
     updateScreenSize();
@@ -120,10 +127,19 @@ const EllipticalAnimation = () => {
     return () => {
       window.removeEventListener('resize', updateScreenSize);
     };
-  }, []);
+  }, [onHeightChange]);
 
   const radiusX = rx[screenSize];
   const radiusY = ry[screenSize];
+
+  const [isHovering, setIsHovering] = useState(false);
+
+  useEffect(() => {
+    if (!isHovering) return;
+    const id = setTimeout(() => setIsHovering(false), 3000);
+
+    return () => clearTimeout(id);
+  }, [isHovering]);
 
   return (
     <div
@@ -131,23 +147,63 @@ const EllipticalAnimation = () => {
       style={{ height: containerHeight[screenSize] }}
     >
       <div className='relative  h-96 flex justify-center items-center'>
-        {/* Center Text */}
-        <motion.div
-          className='relative z-10 text-center'
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+        <div
+          onMouseEnter={() => setIsHovering(true)}
+          className='mb-2 overflow-hidden inline-block relative cursor-default'
+          style={{
+            fontSize: headerFontSize[screenSize],
+            width: headerWidth[screenSize],
+          }}
         >
-          <h1
-            className='carousel-text mb-2'
-            style={{
-              fontSize: headerFontSize[screenSize],
-              width: headerWidth[screenSize],
-            }}
+          <motion.div
+            className='relative z-10 text-center carousel-text'
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             Crafting visual narratives for brands
-          </h1>
-        </motion.div>
+          </motion.div>
+          {isHovering && (
+            <motion.span
+              className='absolute inset-0 z-20 pointer-events-none'
+              initial={{ x: '-100%' }}
+              animate={{ x: '100%' }}
+              exit={{ x: '100%' }}
+              transition={{
+                duration: 2,
+                ease: 'linear',
+              }}
+              style={{
+                height: '50%',
+                background:
+                  'linear-gradient(135deg, transparent 35%, #ff0080 40%, #0080ff 45%, #00ff80 50%, #ff8000 55%, #ff0080 60%, transparent 65%)',
+                mixBlendMode: 'screen',
+                transform: `rotate(45deg)`,
+              }}
+            />
+          )}
+          {isHovering && (
+            <motion.span
+              className='absolute inset-0 z-20 pointer-events-none'
+              initial={{ x: '-50%' }}
+              animate={{ x: '100%' }}
+              exit={{ x: '100%' }}
+              transition={{
+                duration: 2,
+                ease: 'linear',
+                delay: 1.5,
+              }}
+              style={{
+                top: '54%',
+                height: '50%',
+                background:
+                  'linear-gradient(135deg, transparent 35%, #ff0080 40%, #0080ff 45%, #00ff80 50%, #ff8000 55%, #ff0080 60%, transparent 65%)',
+                mixBlendMode: 'screen',
+                transform: `rotate(45deg)`,
+              }}
+            />
+          )}
+        </div>
 
         {/* Images following elliptical paths */}
         {media.map((item, index) => {
@@ -205,9 +261,9 @@ const EllipticalAnimation = () => {
                 },
               }}
               whileHover={{
-                scale: 1.3,
+                scale: 1.4,
                 zIndex: 20,
-                rotate: [0, -2, 2, -2, 2, 0],
+                rotate: [0, -2, 2, -1, 1, 0],
                 transition: {
                   duration: 0.2,
                   rotate: {
@@ -242,4 +298,4 @@ const EllipticalAnimation = () => {
   );
 };
 
-export default EllipticalAnimation;
+export default CirclingCarousel;

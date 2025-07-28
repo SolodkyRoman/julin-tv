@@ -1,7 +1,7 @@
 'use client';
 
 import React, { ReactNode, useEffect } from 'react';
-import Header from './Header';
+import Header, { HEADER_HEIGHT } from './Header';
 import Footer from '@/components/Footer';
 
 const makeScolledElementsVisible = () => {
@@ -59,13 +59,27 @@ const useAnimateVisible = () => {
   }, []);
 };
 
-const CommonLayout = ({ children }: { children: ReactNode }) => {
+const CommonLayout = ({
+  children,
+  contentHeight = 0,
+}: {
+  children: ReactNode;
+  contentHeight?: number;
+}) => {
   useAnimateVisible();
 
   return (
     <div>
       <Header />
-      {children}
+      <div
+        className={`antialiased`}
+        style={{
+          // TODO: fix
+          minHeight: `calc(100vh - ${HEADER_HEIGHT}px - ${contentHeight}px)`,
+        }}
+      >
+        {children}
+      </div>
       <Footer />
     </div>
   );
