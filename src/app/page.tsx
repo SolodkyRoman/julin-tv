@@ -48,6 +48,7 @@ const PROJECTS: ProjectPresentation[] = [
 ];
 
 const Home = () => {
+  console.log(PROJECTS);
   return (
     <CommonLayout>
       <CirclingCarousel />
