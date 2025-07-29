@@ -9,7 +9,7 @@ const Page = () => {
     <ImagePathProvider path='images/projects/fo'>
       <ProjectInfo
         title='Forra'
-        description='Aesté is a high-end home scent brand concept focused on elevating everyday rituals through fragrance. I developed the creative direction, identity, and packaging design, drawing inspiration from the poetic beauty of a blooming flower. The visual language and animations explore the slow, elegant blooming—mirroring the experience of filling a space with luxurious scent.'
+        description='I developed the identity and packaging for Forra, a mushroom tincture brand that merges scientific precision with organic roots. The concept balances a clean, minimal aesthetic—using green to reference the natural world and silver as a distinctive highlight. A custom typographic logo and subtle mushroom imagery further emphasize the brand’s organic foundation.'
       />
 
       <ResponsiveImage imageName='fr1' format='png' alt='' />

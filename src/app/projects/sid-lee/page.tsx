@@ -12,7 +12,7 @@ const Page = () => {
     <ImagePathProvider path='images/projects/sl'>
       <ProjectInfo
         title='Sid Lee'
-        description='Aesté is a high-end home scent brand concept focused on elevating everyday rituals through fragrance. I developed the creative direction, identity, and packaging design, drawing inspiration from the poetic beauty of a blooming flower. The visual language and animations explore the slow, elegant blooming—mirroring the experience of filling a space with luxurious scent.'
+        description='While working at Sid Lee as a social graphic designer, I contributed to the launch of Hogwarts Legacy by creating motion assets for its social media campaigns. I also designed thematic social and in-game visuals for Multiversus, utilizing After Effects and Cinema 4D to bring dynamic concepts to life.'
       />
 
       <SectionDivider label='Social media assets' />

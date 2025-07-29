@@ -13,8 +13,8 @@ const Page = () => {
     <ImagePathProvider path='images/projects/mh'>
       <ProjectInfo
         title='Madison Home'
-        description='Dotted Zebra is a conceptual skincare brand created for adulteens—a bold, expressive generation that balances care with rebellion. The creative direction centers around the idea of skincare with a “wild heart.” While the core packaging remains minimal and clean, the identity brings playful energy through expressive visuals and storytelling.
-The concept also highlights the brand’s commitment to protecting endangered species, weaving purpose into its vibrant personality. All brand imagery and mockups were generated using AI as part of the experimental process.'
+        description='Madison Home is a luxury brand redefining home cleaning by transforming routine tasks into moments of quiet luxury. Their main products are laundry detergent sheets and wool dryer balls. The challenge was to craft a brand identity that embodies elegance while offering a serene approach to the everyday. The design achieves this through minimalist, yet nostalgic layouts that evoke feelings of safety, coziness, and purity. A delicate balance of simplicity and carefully chosen materials  — organic yet refined — enhances the perception of luxury, elevating the everyday into 
+a sensory experience.'
       />
 
       <div className='mx-3 mt-3'>
