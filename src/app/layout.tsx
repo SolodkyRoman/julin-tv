@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import localFont from 'next/font/local';
 
 export const metadata: Metadata = {
   title: 'Yuliya Tverdokhlib',
@@ -9,14 +10,20 @@ export const metadata: Metadata = {
   },
 };
 
+const hostGrotesk = localFont({
+  src: './fonts/HostGrotesk.ttf',
+  display: 'swap',
+  variable: '--font-host-grotesk',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={`antialiased`}>{children}</body>
+    <html lang='en' className={hostGrotesk.variable}>
+      <body className={hostGrotesk.className + 'antialiased'}>{children}</body>
     </html>
   );
 }
