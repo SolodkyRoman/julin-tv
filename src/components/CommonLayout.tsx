@@ -5,7 +5,6 @@ import Header, { HEADER_HEIGHT } from './Header';
 import Footer, { FOOTER_HEIGHT } from '@/components/Footer';
 import InvertingCursor from '@/components/InvertingCursor';
 import { usePathname } from 'next/navigation';
-import Head from 'next/head';
 
 const makeScolledElementsVisible = () => {
   const animatedElements = document.querySelectorAll('.animate-visible');
@@ -73,10 +72,6 @@ const CommonLayout = ({
 
   return (
     <div>
-      <Head>
-        <link rel='icon' type='image/png' href='/favicon.svg' />
-        {/* fallback */}
-      </Head>
       <InvertingCursor />
       {/*<PerformanceMonitor />*/}
       <Header />
