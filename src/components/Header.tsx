@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -20,12 +21,12 @@ const Header = () => {
     >
       <div className='flex justify-between items-center'>
         <Link
-          className='flex flex-col text-[24px]'
+          className='flex flex-col text-[24px] '
           style={{ lineHeight: 1.1 }}
           href='/'
         >
-          <span>Yuliya Tverdokhlib</span>
-          <span>Brand Design & Art Direction</span>
+          <span className='cursor-button'>Yuliya Tverdokhlib</span>
+          <span className='cursor-button'>Brand Design & Art Direction</span>
         </Link>
 
         <nav className='flex items-center gap-3'>

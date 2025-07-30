@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import React, { useEffect, useLayoutEffect, useState } from 'react';
+import Link from 'next/link';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -153,13 +154,17 @@ const CirclingCarousel = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
+            whileTap={{
+              scale: 0.7,
+              transition: { duration: 0.2, ease: 'linear' },
+            }}
           >
-            Crafting visual narratives for brands
+            <Link href='/projects'>Crafting visual narratives for brands</Link>
           </motion.div>
           {isHovering && (
             <motion.span
               className='absolute inset-0 z-20 pointer-events-none'
-              initial={{ x: '-100%' }}
+              initial={{ x: '-90%' }}
               animate={{ x: '100%' }}
               exit={{ x: '100%' }}
               transition={{

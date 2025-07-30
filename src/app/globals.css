@@ -20,10 +20,26 @@
     --color-lime-green: #9DFF00;
 }
 
+* {
+    cursor: none !important;
+}
+
 body {
+    cursor: none !important;
     background: var(--background);
     color: var(--foreground);
     font-family: "Host Grotesk", Arial, Helvetica, sans-serif;
+    line-height: 1.25;
+}
+
+::selection {
+    background-color: #ff47fc;
+    color: white;
+}
+
+::-moz-selection {
+    background-color: #ff47fc;
+    color: white;
 }
 
 .carousel-text {

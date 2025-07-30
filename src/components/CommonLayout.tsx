@@ -3,6 +3,9 @@
 import React, { ReactNode, useEffect } from 'react';
 import Header, { HEADER_HEIGHT } from './Header';
 import Footer, { FOOTER_HEIGHT } from '@/components/Footer';
+import InvertingCursor from '@/components/InvertingCursor';
+import { usePathname } from 'next/navigation';
+import Head from 'next/head';
 
 const makeScolledElementsVisible = () => {
   const animatedElements = document.querySelectorAll('.animate-visible');
@@ -42,6 +45,7 @@ const animateOnEnterFromBelow = (entries: IntersectionObserverEntry[]) => {
 };
 
 const useAnimateVisible = () => {
+  const pathname = usePathname();
   useEffect(() => {
     makeScolledElementsVisible();
     const observer = new IntersectionObserver(animateOnEnterFromBelow, {
@@ -56,7 +60,7 @@ const useAnimateVisible = () => {
       animatedElements.forEach(el => observer.unobserve(el));
       observer.disconnect();
     };
-  }, []);
+  }, [pathname]);
 };
 
 const CommonLayout = ({
@@ -69,6 +73,12 @@ const CommonLayout = ({
 
   return (
     <div>
+      <Head>
+        <link rel='icon' type='image/png' href='/favicon.svg' />
+        {/* fallback */}
+      </Head>
+      <InvertingCursor />
+      {/*<PerformanceMonitor />*/}
       <Header />
       <div
         className={`antialiased`}

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
@@ -60,22 +62,32 @@ const Page = () => {
       <div className='mx-3 mt-8'>
         <div className='grid grid-cols-2 gap-6'>
           {projects.map(project => (
-            <Link key={project.title} href={project.link} className='block'>
+            <div key={project.title}>
               <div className='mb-4 animate-visible leading-[1.5]'>
-                <h2 className='text-[24px]'>{project.title}</h2>
-                <p className='text-[15px]'>{project.meta}</p>
+                <Link
+                  key={project.title}
+                  href={project.link}
+                  className='text-[24px]'
+                >
+                  {project.title}
+                </Link>
+                <div className='text-[15px]'>
+                  <span className='cursor-text'>{project.meta}</span>
+                </div>
               </div>
 
-              <div className='overflow-hidden'>
-                <ResponsiveImage
-                  rowCount={2}
-                  className='w-full hover:scale-115 transition-transform duration-300 ease-out'
-                  imageName={project.thumbnail}
-                  format='png'
-                  alt='project thumbnail'
-                />
-              </div>
-            </Link>
+              <Link key={project.title} href={project.link} className='block'>
+                <div className='overflow-hidden'>
+                  <ResponsiveImage
+                    rowCount={2}
+                    className='w-full hover:scale-115 transition-transform duration-300 ease-out'
+                    imageName={project.thumbnail}
+                    format='png'
+                    alt='project thumbnail'
+                  />
+                </div>
+              </Link>
+            </div>
           ))}
         </div>
       </div>
