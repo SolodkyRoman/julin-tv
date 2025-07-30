@@ -19,10 +19,16 @@ const projects = [
     link: '/projects/spring-break',
   },
   {
-    title: 'Aesté',
-    meta: 'Brand Identity, packaging',
-    thumbnail: '3',
-    link: '/projects/aeste',
+    title: 'Glassdoor',
+    meta: 'Brand Design',
+    thumbnail: '9',
+    link: '/projects/glassdoor',
+  },
+  {
+    title: 'Bake Today',
+    meta: 'Brand Identity, Packaging Design',
+    thumbnail: '6',
+    link: '/projects/bake-today',
   },
   {
     title: 'Madison Home',
@@ -37,11 +43,12 @@ const projects = [
     link: '/projects/dotted-zebra',
   },
   {
-    title: 'Bake Today',
-    meta: 'Brand Identity, Packaging Design',
-    thumbnail: '6',
-    link: '/projects/bake-today',
+    title: 'Aesté',
+    meta: 'Brand Identity, packaging',
+    thumbnail: '3',
+    link: '/projects/aeste',
   },
+
   {
     title: 'Sid Lee',
     meta: 'Social Media Designer',

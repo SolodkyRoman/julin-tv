@@ -1,10 +1,9 @@
 'use client';
 
-import React, { ReactNode } from 'react';
-import CommonLayout from '@/components/CommonLayout';
+import { ReactNode } from 'react';
 
 const Layout = ({ children }: { children: ReactNode }) => {
-  return <CommonLayout>{children}</CommonLayout>;
+  return children;
 };
 
 export default Layout;

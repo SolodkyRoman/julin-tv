@@ -38,7 +38,7 @@ const Page = () => {
           className='animate-visible w-full'
         >
           <source
-            src={`${BASE_PATH}/images/projects/sl/sl1.mp4`}
+            src={`${BASE_PATH}/images/projects/sl/sl2.mp4`}
             type='video/mp4'
           />
         </video>

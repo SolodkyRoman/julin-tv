@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { memo, useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import { Transition } from 'motion';
 
@@ -124,4 +124,4 @@ const InvertingCursor = () => {
   );
 };
 
-export default InvertingCursor;
+export default memo(InvertingCursor);

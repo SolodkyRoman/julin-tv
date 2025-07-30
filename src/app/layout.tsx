@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import localFont from 'next/font/local';
+import CommonLayout from '@/components/CommonLayout';
 
 export const metadata: Metadata = {
   title: 'Yuliya Tverdokhlib',
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className={host_grotesk.variable}>
-      <body className={host_grotesk.className + 'antialiased'}>{children}</body>
+      <body className={host_grotesk.className + 'antialiased'}>
+        <CommonLayout>{children}</CommonLayout>
+      </body>
     </html>
   );
 }

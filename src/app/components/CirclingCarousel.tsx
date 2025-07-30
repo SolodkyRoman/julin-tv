@@ -12,9 +12,11 @@ const media = [
   '3.png',
   '4.mp4',
   '5.png',
+  '9.png',
   '6.png',
   '7.mp4',
   '8.png',
+  'choco.mp4',
   'dz7.png',
 ];
 
