@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
 };
 
-const hostGrotesk = localFont({
+const host_grotesk = localFont({
   src: './fonts/HostGrotesk.ttf',
   display: 'swap',
   variable: '--font-host-grotesk',
@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className={hostGrotesk.variable}>
-      <body className={hostGrotesk.className + 'antialiased'}>{children}</body>
+    <html lang='en' className={host_grotesk.variable}>
+      <body className={host_grotesk.className + 'antialiased'}>{children}</body>
     </html>
   );
 }

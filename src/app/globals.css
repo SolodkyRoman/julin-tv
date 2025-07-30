@@ -36,7 +36,7 @@ body {
 }
 
 .carousel-text {
-    font-family: 'Host Grotesk', Arial, sans-serif;
+    font-family: var(--font-host-grotesk);
     font-weight: 400;
     font-style: normal;
     font-size: 62px;
