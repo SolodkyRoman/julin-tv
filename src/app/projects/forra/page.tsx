@@ -3,10 +3,13 @@
 import ProjectInfo from '@/app/projects/ProjectInfo';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import ResponsiveImage from '@/components/ResponsiveImage';
+import MediaPreloader from '@/components/MediaPreloader';
 
 const Page = () => {
   return (
-    <ImagePathProvider path='images/projects/fo'>
+    <>
+      <MediaPreloader />
+      <ImagePathProvider path='images/projects/fo'>
       <ProjectInfo
         title='Forra'
         description='I developed the identity and packaging for Forra, a mushroom tincture brand that merges scientific precision with organic roots. The concept balances a clean, minimal aesthetic—using green to reference the natural world and silver as a distinctive highlight. A custom typographic logo and subtle mushroom imagery further emphasize the brand’s organic foundation.'
@@ -70,6 +73,7 @@ const Page = () => {
         alt='Proper Wild Insta Ad 1'
       />
     </ImagePathProvider>
+    </>
   );
 };
 

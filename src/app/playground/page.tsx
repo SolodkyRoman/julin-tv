@@ -3,12 +3,15 @@
 import ProjectInfo from '@/app/projects/ProjectInfo';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import ResponsiveImage from '@/components/ResponsiveImage';
+import MediaPreloader from '@/components/MediaPreloader';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const Page = () => {
   return (
-    <ImagePathProvider path='images/projects/playground'>
+    <>
+      <MediaPreloader />
+      <ImagePathProvider path='images/projects/playground'>
       <ProjectInfo
         title='Play'
         description='In my free time, I love experimenting with motion design, music poster, crafting printed zines, and creating playful content for my blog.'
@@ -84,7 +87,8 @@ const Page = () => {
           />
         </video>
       </div>
-    </ImagePathProvider>
+      </ImagePathProvider>
+    </>
   );
 };
 

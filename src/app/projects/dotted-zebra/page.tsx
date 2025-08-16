@@ -3,12 +3,15 @@
 import ProjectInfo from '@/app/projects/ProjectInfo';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import ResponsiveImage from '@/components/ResponsiveImage';
+import MediaPreloader from '@/components/MediaPreloader';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const Page = () => {
   return (
-    <ImagePathProvider path='images/projects/dz'>
+    <>
+      <MediaPreloader />
+      <ImagePathProvider path='images/projects/dz'>
       <ProjectInfo
         title='Dotted Zebra'
         description='Dotted Zebra is a conceptual skincare brand created for adulteens—a bold, expressive generation that balances care with rebellion. The creative direction centers around the idea of skincare with a “wild heart.” While the core packaging remains minimal and clean, the identity brings playful energy through expressive visuals and storytelling. The concept also highlights the brand’s commitment to protecting endangered species, weaving purpose into its vibrant personality. All brand imagery and mockups were generated using AI as part of the experimental process.'
@@ -118,6 +121,7 @@ const Page = () => {
         />
       </div>
     </ImagePathProvider>
+    </>
   );
 };
 

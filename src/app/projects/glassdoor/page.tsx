@@ -4,12 +4,15 @@ import ProjectInfo from '@/app/projects/ProjectInfo';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import SectionDivider from '@/components/SectionDivider';
+import MediaPreloader from '@/components/MediaPreloader';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const Page = () => {
   return (
-    <ImagePathProvider path='images/projects/gd'>
+    <>
+      <MediaPreloader />
+      <ImagePathProvider path='images/projects/gd'>
       <ProjectInfo
         title='Glassdoor'
         description='As a Brand Designer at Glassdoor, I contributed to a wide range of creative initiatives, from ideating and brainstorming email and blog campaigns to designing social content, digital banners, custom illustrations, and motion assets.'
@@ -125,6 +128,7 @@ const Page = () => {
         />
       </div>
     </ImagePathProvider>
+    </>
   );
 };
 

@@ -6,13 +6,16 @@ import ResponsiveImage from '@/components/ResponsiveImage';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import Slider from '@/components/Slider';
 import HorizontalProgressiveScroll from '@/components/HorizontalProgressiveScroll';
+import MediaPreloader from '@/components/MediaPreloader';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const SLIDER_IMAGES = ['PW12_a', 'PW12_b', 'PW12_c', 'PW12_d', 'PW12_e'];
 
 const Page = () => {
   return (
-    <ImagePathProvider path='images/projects/proper-wild'>
+    <>
+      <MediaPreloader />
+      <ImagePathProvider path='images/projects/proper-wild'>
       <ProjectInfo
         title='Proper Wild'
         description='As the Senior Brand Designer at Proper Wild, I lead all design efforts, overseeing creative execution across both digital and print channels. My work includes digital ads, motion graphics, photo retouching, Amazon assets, email campaigns, and POS materials. I ensure consistent brand alignment across emails, social media, and printed collateral.'
@@ -211,6 +214,7 @@ const Page = () => {
         />
       </div>
     </ImagePathProvider>
+    </>
   );
 };
 

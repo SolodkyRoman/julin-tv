@@ -4,12 +4,15 @@ import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import ProjectInfo from '@/app/projects/ProjectInfo';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import SectionDivider from '@/components/SectionDivider';
+import MediaPreloader from '@/components/MediaPreloader';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const Page = () => {
   return (
-    <ImagePathProvider path='images/projects/sb'>
+    <>
+      <MediaPreloader />
+      <ImagePathProvider path='images/projects/sb'>
       <ProjectInfo
         title='Spring Break'
         description='I led the art direction for Proper Wild’s Spring Break 360 campaign, a multi-channel brand experience across a series of Florida events. Inspired by early 2000s TV shows, I developed a custom visual identity including a logo, merch, OOH ads, and motion assets. The campaign brought the brand to life through nostalgic visuals, bold storytelling, and energetic design.'
@@ -146,6 +149,7 @@ const Page = () => {
         />
       </div>
     </ImagePathProvider>
+    </>
   );
 };
 

@@ -4,12 +4,15 @@ import ProjectInfo from '@/app/projects/ProjectInfo';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import SectionDivider from '@/components/SectionDivider';
+import MediaPreloader from '@/components/MediaPreloader';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const Page = () => {
   return (
-    <ImagePathProvider path='images/projects/sl'>
+    <>
+      <MediaPreloader />
+      <ImagePathProvider path='images/projects/sl'>
       <ProjectInfo
         title='Sid Lee'
         description='While working at Sid Lee as a social graphic designer, I contributed to the launch of Hogwarts Legacy by creating motion assets for its social media campaigns. I also designed thematic social and in-game visuals for Multiversus, utilizing After Effects and Cinema 4D to bring dynamic concepts to life.'
@@ -95,6 +98,7 @@ const Page = () => {
         alt='Proper Wild Insta Ad 1'
       />
     </ImagePathProvider>
+    </>
   );
 };
 

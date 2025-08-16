@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import ResponsiveImage from '@/components/ResponsiveImage';
+import MediaPreloader from '@/components/MediaPreloader';
 
 const projects = [
   {
@@ -65,7 +66,9 @@ const projects = [
 
 const Page = () => {
   return (
-    <ImagePathProvider path='images/thumbnails'>
+    <>
+      <MediaPreloader />
+      <ImagePathProvider path='images/thumbnails'>
       <div className='mx-3 mt-8'>
         <div className='grid grid-cols-2 gap-6'>
           {projects.map(project => (
@@ -98,7 +101,8 @@ const Page = () => {
           ))}
         </div>
       </div>
-    </ImagePathProvider>
+      </ImagePathProvider>
+    </>
   );
 };
 

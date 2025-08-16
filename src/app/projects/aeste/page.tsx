@@ -3,12 +3,15 @@
 import ProjectInfo from '@/app/projects/ProjectInfo';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import ResponsiveImage from '@/components/ResponsiveImage';
+import MediaPreloader from '@/components/MediaPreloader';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const Page = () => {
   return (
-    <ImagePathProvider path='images/projects/ae'>
+    <>
+      <MediaPreloader />
+      <ImagePathProvider path='images/projects/ae'>
       <ProjectInfo
         title='Aesté'
         description='Aesté is a high-end home scent brand concept focused on elevating everyday rituals through fragrance. I developed the creative direction, identity, and packaging design, drawing inspiration from the poetic beauty of a blooming flower. The visual language and animations explore the slow, elegant blooming—mirroring the experience of filling a space with luxurious scent.'
@@ -66,6 +69,7 @@ const Page = () => {
         />
       </div>
     </ImagePathProvider>
+    </>
   );
 };
 

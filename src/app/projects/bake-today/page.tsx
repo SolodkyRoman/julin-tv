@@ -3,12 +3,15 @@
 import ProjectInfo from '@/app/projects/ProjectInfo';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import ResponsiveImage from '@/components/ResponsiveImage';
+import MediaPreloader from '@/components/MediaPreloader';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const Page = () => {
   return (
-    <ImagePathProvider path='images/projects/bt'>
+    <>
+      <MediaPreloader />
+      <ImagePathProvider path='images/projects/bt'>
       <ProjectInfo
         title='Bake Today'
         description='Direction and identity for Bake Today—an easy and delicious baking mix designed to bring fresh, nutritious, and flavorful breakfasts to every family. The brand identity is built around bright, bold color pairings, with red as the primary brand color to evoke the warmth of freshly prepared food. The logo features custom lettering that is both memorable and distinctive, serving as a signature element of the brand. Simple, playful illustrations complement the design, adding charm and approachability to the overall aesthetic.'
@@ -91,6 +94,7 @@ const Page = () => {
         </div>
       </div>
     </ImagePathProvider>
+    </>
   );
 };
 

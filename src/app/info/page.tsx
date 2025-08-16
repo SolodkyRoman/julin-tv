@@ -1,6 +1,7 @@
 'use client';
 
 import ResponsiveImage from '@/components/ResponsiveImage';
+import MediaPreloader from '@/components/MediaPreloader';
 
 type Project = {
   name: string;
@@ -36,7 +37,9 @@ const InfoBlock = ({
 
 const Page = () => {
   return (
-    <div className='pt-8 mx-auto px-3 max-w-[1600px]'>
+    <>
+      <MediaPreloader />
+      <div className='pt-8 mx-auto px-3 max-w-[1600px]'>
       <div className='grid grid-cols-2 gap-12'>
         <ResponsiveImage
           rowCount={2}
@@ -112,7 +115,8 @@ const Page = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

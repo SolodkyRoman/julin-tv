@@ -4,13 +4,16 @@ import ProjectInfo from '@/app/projects/ProjectInfo';
 import { ImagePathProvider } from '@/providers/ImagePathProvider';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import Slider from '@/components/Slider';
+import MediaPreloader from '@/components/MediaPreloader';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const SLIDER_IMAGES = ['mh5', 'mh6', 'mh7'];
 
 const Page = () => {
   return (
-    <ImagePathProvider path='images/projects/mh'>
+    <>
+      <MediaPreloader />
+      <ImagePathProvider path='images/projects/mh'>
       <ProjectInfo
         title='Madison Home'
         description='Madison Home is a luxury brand redefining home cleaning by transforming routine tasks into moments of quiet luxury. Their main products are laundry detergent sheets and wool dryer balls. The challenge was to craft a brand identity that embodies elegance while offering a serene approach to the everyday. The design achieves this through minimalist, yet nostalgic layouts that evoke feelings of safety, coziness, and purity. A delicate balance of simplicity and carefully chosen materials  — organic yet refined — enhances the perception of luxury, elevating the everyday into 
@@ -97,6 +100,7 @@ a sensory experience.'
         </video>
       </div>
     </ImagePathProvider>
+    </>
   );
 };
 
