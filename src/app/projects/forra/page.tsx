@@ -17,7 +17,7 @@ const Page = () => {
 
       <ResponsiveImage imageName='fr1' format='png' alt='' />
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='fr2'
           format='png'
@@ -45,7 +45,7 @@ const Page = () => {
         alt='Proper Wild Insta Ad 1'
       />
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='fr6'
           format='png'

@@ -15,7 +15,7 @@ const InfoBlock = ({
   title: string;
   projects: Project[];
 }) => (
-  <div className='w-[270px] mb-4'>
+  <div className='w-full md:w-[270px] mb-4'>
     <div className='border-b-1 pb-2 mb-2 cursor-text'>{title}</div>
     {projects.map(project => (
       <div key={project.name}>
@@ -40,7 +40,7 @@ const Page = () => {
     <>
       <MediaPreloader />
       <div className='pt-8 mx-auto px-3 max-w-[1600px]'>
-      <div className='grid grid-cols-2 gap-12'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12'>
         <ResponsiveImage
           rowCount={2}
           imageName='me'
@@ -60,7 +60,7 @@ const Page = () => {
             zines, motion, and contributing to her design blog.
           </span>
           <div
-            className='grid grid-cols-2 gap-3 mt-12'
+            className='grid grid-cols-1 md:grid-cols-2 gap-3 mt-6 md:mt-12'
             style={{ lineHeight: 1.3 }}
           >
             <InfoBlock

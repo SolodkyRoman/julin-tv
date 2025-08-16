@@ -30,7 +30,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           rowCount={2}
           imageName='SB3'
@@ -47,7 +47,7 @@ const Page = () => {
 
       <SectionDivider label='Logo animation' />
 
-      <div className='flex gap-3 mx-3 mt-3 flex-col'>
+      <div className='flex flex-col gap-3 mx-3 mt-3'>
         <video autoPlay muted loop playsInline className='animate-visible'>
           <source
             src={`${BASE_PATH}/images/projects/sb/SB5.mp4`}
@@ -63,7 +63,7 @@ const Page = () => {
 
       <SectionDivider label='Truck & merch' />
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <div className='flex-1'>
           <video autoPlay muted loop playsInline className='animate-visible'>
             <source
@@ -92,7 +92,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           rowCount={2}
           imageName='SB9'
@@ -108,7 +108,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           rowCount={2}
           imageName='SB11'
@@ -124,7 +124,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           rowCount={3}
           imageName='SB13'
@@ -132,7 +132,7 @@ const Page = () => {
           alt='Proper Wild Banner'
           className='w-2/5'
         />
-        <div className='w-[30%]'>
+        <div className='w-full md:w-[30%]'>
           <video autoPlay muted loop playsInline className='animate-visible'>
             <source
               src={`${BASE_PATH}/images/projects/sb/SB14.mp4`}
@@ -142,7 +142,7 @@ const Page = () => {
         </div>
         <ResponsiveImage
           rowCount={3}
-          className='w-[30%]'
+          className='w-full md:w-[30%]'
           imageName='SB15'
           format='webp'
           alt='Proper Wild Banner'

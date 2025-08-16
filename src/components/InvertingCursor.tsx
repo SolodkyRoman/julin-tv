@@ -91,7 +91,7 @@ const InvertingCursor = () => {
 
   return (
     <motion.div
-      className='fixed pointer-events-none z-50'
+      className='fixed pointer-events-none z-[70]'
       style={{
         backgroundColor: 'white',
         mixBlendMode: 'difference',

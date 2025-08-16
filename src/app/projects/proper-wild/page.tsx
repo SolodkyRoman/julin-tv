@@ -25,7 +25,7 @@ const Page = () => {
 
       <SectionDivider label='Ads' />
 
-      <div className='flex gap-3 mx-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3'>
         <ResponsiveImage
           imageName='PW2'
           format='png'
@@ -55,7 +55,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='PW6'
           format='png'
@@ -80,7 +80,7 @@ const Page = () => {
 
       <SectionDivider label='Email Design' />
 
-      <div className='flex gap-3 mx-auto w-[70%]'>
+      <div className='flex flex-col md:flex-row gap-3 mx-auto w-full md:w-[70%]'>
         <ResponsiveImage
           imageName='PW9'
           format='png'
@@ -98,13 +98,13 @@ const Page = () => {
 
       <SectionDivider label='Amazon Assets' />
 
-      <div className='grid grid-cols-2 gap-3 mx-3'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-3 mx-3'>
         <ResponsiveImage
           imageName='PW11'
           format='png'
           alt='prope'
           rowCount={2}
-          className='flex-1/2'
+          className='flex-1'
         />
 
         <Slider imgNames={SLIDER_IMAGES} rowCount={2} />
@@ -147,7 +147,7 @@ const Page = () => {
           />
         </video>
 
-        <div className='grid grid-cols-4 gap-3 mx-3'>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-3 mx-3'>
           <video
             autoPlay
             muted
@@ -199,7 +199,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className='flex mx-3 mt-20 mb-3 gap-3'>
+      <div className='flex flex-col md:flex-row mx-3 mt-20 mb-3 gap-3'>
         <ResponsiveImage
           rowCount={2}
           imageName='PW21_final'

@@ -20,7 +20,7 @@ const Page = () => {
 
       <SectionDivider label='Social media assets' />
 
-      <div className='grid grid-cols-2 gap-3 mx-3'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-3 mx-3'>
         <video
           autoPlay
           muted
@@ -47,7 +47,7 @@ const Page = () => {
         </video>
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='sl3'
           format='png'
@@ -68,7 +68,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='sl6'
           format='png'

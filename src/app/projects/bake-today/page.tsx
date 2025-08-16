@@ -31,7 +31,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='bt4'
           format='png'
@@ -52,7 +52,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='bt7'
           format='png'
@@ -76,15 +76,15 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex mx-3 my-3 gap-3'>
+      <div className='flex flex-col md:flex-row mx-3 my-3 gap-3'>
         <ResponsiveImage
           imageName='bt10'
           format='png'
           rowCount={2}
           alt='Proper Wild Insta Ad 1'
-          className='flex-1/2'
+          className='flex-1'
         />
-        <div className='flex-1/2'>
+        <div className='flex-1'>
           <video autoPlay muted loop playsInline className='animate-visible'>
             <source
               src={`${BASE_PATH}/images/projects/bt/bt11.mp4`}

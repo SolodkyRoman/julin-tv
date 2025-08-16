@@ -17,7 +17,7 @@ const Page = () => {
         description='Dotted Zebra is a conceptual skincare brand created for adulteens—a bold, expressive generation that balances care with rebellion. The creative direction centers around the idea of skincare with a “wild heart.” While the core packaging remains minimal and clean, the identity brings playful energy through expressive visuals and storytelling. The concept also highlights the brand’s commitment to protecting endangered species, weaving purpose into its vibrant personality. All brand imagery and mockups were generated using AI as part of the experimental process.'
       />
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='dz1'
           format='webp'
@@ -40,7 +40,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='dz4'
           format='png'
@@ -64,7 +64,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='w-[70%] mx-auto my-6'>
+      <div className='w-full md:w-[70%] mx-auto my-6'>
         <ResponsiveImage
           imageName='dz7'
           format='webp'
@@ -73,7 +73,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='dz8'
           format='webp'
@@ -88,7 +88,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='dz10'
           format='png'
@@ -103,8 +103,8 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex mx-3 my-3 gap-3'>
-        <div className='flex-1/2'>
+      <div className='flex flex-col md:flex-row mx-3 my-3 gap-3'>
+        <div className='flex-1'>
           <video autoPlay muted loop playsInline className='animate-visible'>
             <source
               src={`${BASE_PATH}/images/projects/dz/dz12.mp4`}
@@ -117,7 +117,7 @@ const Page = () => {
           format='png'
           rowCount={2}
           alt='Proper Wild Insta Ad 1'
-          className='flex-1/2'
+          className='flex-1'
         />
       </div>
     </ImagePathProvider>

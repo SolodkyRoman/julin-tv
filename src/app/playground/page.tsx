@@ -17,8 +17,8 @@ const Page = () => {
         description='In my free time, I love experimenting with motion design, music poster, crafting printed zines, and creating playful content for my blog.'
       />
 
-      <div className='flex gap-3 mx-3 items-stretch'>
-        <div className='w-[55%]'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 items-stretch'>
+        <div className='w-full md:w-[55%]'>
           <video
             autoPlay
             muted
@@ -37,11 +37,11 @@ const Page = () => {
           format='png'
           rowCount={2}
           alt=''
-          className='w-[45%]'
+          className='w-full md:w-[45%]'
         />
       </div>
 
-      <div className='flex gap-3 mx-3 items-start mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 items-start mt-3'>
         {/* First two items share remaining space and stretch to match last item's height */}
         <div className='flex-1 self-stretch overflow-hidden'>
           <video

@@ -17,7 +17,7 @@ const Page = () => {
         description='Aesté is a high-end home scent brand concept focused on elevating everyday rituals through fragrance. I developed the creative direction, identity, and packaging design, drawing inspiration from the poetic beauty of a blooming flower. The visual language and animations explore the slow, elegant blooming—mirroring the experience of filling a space with luxurious scent.'
       />
 
-      <div className='grid grid-cols-2 gap-3 mx-3'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-3 mx-3'>
         <video
           autoPlay
           muted
@@ -33,7 +33,7 @@ const Page = () => {
         <ResponsiveImage imageName='ae2' format='png' rowCount={2} alt='' />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='ae3'
           format='png'
@@ -54,7 +54,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex gap-3 mx-3 mt-3'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 mt-3'>
         <ResponsiveImage
           imageName='ae6'
           format='png'

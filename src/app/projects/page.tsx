@@ -70,7 +70,7 @@ const Page = () => {
       <MediaPreloader />
       <ImagePathProvider path='images/thumbnails'>
       <div className='mx-3 mt-8'>
-        <div className='grid grid-cols-2 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           {projects.map(project => (
             <div key={project.title}>
               <div className='mb-4 animate-visible leading-[1.5]'>

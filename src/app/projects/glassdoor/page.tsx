@@ -20,7 +20,7 @@ const Page = () => {
 
       <SectionDivider label='Motion assets' />
 
-      <div className='grid grid-cols-2 gap-3 mx-3'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-3 mx-3'>
         <video
           autoPlay
           muted
@@ -64,7 +64,7 @@ const Page = () => {
 
       <SectionDivider label='Blog assets & illustrations' />
 
-      <div className='grid grid-cols-2 gap-3 mx-3'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-3 mx-3'>
         <ResponsiveImage
           imageName='3'
           format='png'
@@ -80,7 +80,7 @@ const Page = () => {
         />
       </div>
 
-      <div className='grid grid-cols-3 gap-3 mt-3 mx-3'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-3 mt-3 mx-3'>
         <ResponsiveImage
           imageName='5'
           format='png'
@@ -105,7 +105,7 @@ const Page = () => {
 
       <SectionDivider label='Email design & illustration' />
 
-      <div className='grid grid-cols-3 gap-3 mt-3 mx-3'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-3 mt-3 mx-3'>
         <ResponsiveImage
           imageName='8'
           format='png'
