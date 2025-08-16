@@ -5,13 +5,13 @@ export const FOOTER_HEIGHT = 80;
 const Footer = () => {
   return (
     <div
-      className='mx-3 flex justify-between items-center font-bold text-[#DBDBDB]'
+      className='mx-3 flex flex-col md:flex-row justify-between items-center md:items-center font-bold text-[#DBDBDB] gap-4 md:gap-0 py-4 md:py-0'
       style={{
-        height: FOOTER_HEIGHT,
+        minHeight: FOOTER_HEIGHT,
       }}
     >
-      <span>2025 yuliya.tv</span>
-      <ul className='flex gap-8'>
+      <span className='text-center md:text-left'>2025 yuliya.tv</span>
+      <ul className='flex flex-col md:flex-row gap-2 md:gap-8 text-center md:text-left'>
         <li>
           <a href='mailto:yuliya.tverdohlib@gmail.com'>Email</a>
         </li>
