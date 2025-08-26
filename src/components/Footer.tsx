@@ -5,7 +5,7 @@ export const FOOTER_HEIGHT = 80;
 const Footer = () => {
   return (
     <div
-      className='mx-3 flex flex-col md:flex-row justify-between items-center md:items-center font-bold text-[#DBDBDB] gap-4 md:gap-0 py-4 md:py-0'
+      className='mx-3 flex flex-col md:flex-row justify-between items-center font-bold text-[#DBDBDB] gap-4 md:gap-0 py-4 md:py-0'
       style={{
         minHeight: FOOTER_HEIGHT,
       }}

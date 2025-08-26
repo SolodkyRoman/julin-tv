@@ -130,10 +130,10 @@ const Page = () => {
           imageName='SB13'
           format='webp'
           alt='Proper Wild Banner'
-          className='w-2/5'
+          className='w-full md:w-2/5'
         />
         <div className='w-full md:w-[30%]'>
-          <video autoPlay muted loop playsInline className='animate-visible'>
+          <video autoPlay muted loop playsInline className='animate-visible w-full'>
             <source
               src={`${BASE_PATH}/images/projects/sb/SB14.mp4`}
               type='video/mp4'

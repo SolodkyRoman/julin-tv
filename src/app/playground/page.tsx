@@ -41,9 +41,8 @@ const Page = () => {
         />
       </div>
 
-      <div className='flex flex-col md:flex-row gap-3 mx-3 items-start mt-3'>
-        {/* First two items share remaining space and stretch to match last item's height */}
-        <div className='flex-1 self-stretch overflow-hidden'>
+      <div className='flex flex-col md:flex-row gap-3 mx-3 items-stretch mt-3'>
+        <div className='flex-1 overflow-hidden'>
           <video
             autoPlay
             muted
@@ -58,7 +57,7 @@ const Page = () => {
           </video>
         </div>
 
-        <div className='flex-1 self-stretch overflow-hidden'>
+        <div className='flex-1 overflow-hidden'>
           <video
             autoPlay
             muted
@@ -73,19 +72,20 @@ const Page = () => {
           </video>
         </div>
 
-        {/* Last item determines both width and height naturally */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className='animate-visible shrink-0'
-        >
-          <source
-            src={`${BASE_PATH}/images/projects/playground/5.mp4`}
-            type='video/mp4'
-          />
-        </video>
+        <div className='flex-1 overflow-hidden'>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className='animate-visible w-full h-full object-cover'
+          >
+            <source
+              src={`${BASE_PATH}/images/projects/playground/5.mp4`}
+              type='video/mp4'
+            />
+          </video>
+        </div>
       </div>
       </ImagePathProvider>
     </>

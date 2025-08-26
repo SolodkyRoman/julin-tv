@@ -6,18 +6,6 @@ import Footer, { FOOTER_HEIGHT } from '@/components/Footer';
 import InvertingCursor from '@/components/InvertingCursor';
 import { usePathname } from 'next/navigation';
 
-const makeScolledElementsVisible = () => {
-  const animatedElements = document.querySelectorAll('.animate-visible');
-  animatedElements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    const isAboveViewport = rect.bottom > 0 || window.scrollY >= rect.top;
-
-    if (isAboveViewport) {
-      el.classList.add('visible');
-    }
-  });
-};
-
 const animateOnEnterFromBelow = (entries: IntersectionObserverEntry[]) => {
   entries.forEach(entry => {
     const { isIntersecting, boundingClientRect, target } = entry;
@@ -45,8 +33,8 @@ const animateOnEnterFromBelow = (entries: IntersectionObserverEntry[]) => {
 
 const useAnimateVisible = () => {
   const pathname = usePathname();
+
   useEffect(() => {
-    makeScolledElementsVisible();
     const observer = new IntersectionObserver(animateOnEnterFromBelow, {
       threshold: 0,
       rootMargin: '0px 0px 0px 0px',

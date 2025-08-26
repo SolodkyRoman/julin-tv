@@ -85,7 +85,7 @@ const Page = () => {
           className='flex-1'
         />
         <div className='flex-1'>
-          <video autoPlay muted loop playsInline className='animate-visible'>
+          <video autoPlay muted loop playsInline className='animate-visible w-full h-full object-cover'>
             <source
               src={`${BASE_PATH}/images/projects/bt/bt11.mp4`}
               type='video/mp4'
