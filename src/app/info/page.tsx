@@ -107,7 +107,7 @@ const Page = () => {
               For all project enquiries, you can email me at{' '}
             </span>
             <a
-              href='mailto:yuliya.tverdohlib@gmail.com'
+              href='mailto:hello@yuliya.tv'
               className='cursor-button font-bold'
             >
               yuliya.tverdohlib@gmail.com
