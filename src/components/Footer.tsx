@@ -13,7 +13,7 @@ const Footer = () => {
       <span className='text-center md:text-left'>2025 yuliya.tv</span>
       <ul className='flex flex-col md:flex-row gap-2 md:gap-8 text-center md:text-left'>
         <li>
-          <a href='mailto:yuliya.tverdohlib@gmail.com'>Email</a>
+          <a href='mailto:hello@yuliya.tv'>Email</a>
         </li>
         <li>
           <a href='https://www.behance.net/yuliyatverbafe'>Behance</a>
