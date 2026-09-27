@@ -110,7 +110,7 @@ const Page = () => {
               href='mailto:hello@yuliya.tv'
               className='cursor-button font-bold'
             >
-              yuliya.tverdohlib@gmail.com
+              hello@yuliya.tv
             </a>
           </div>
         </div>
